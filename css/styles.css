@@ -777,6 +777,19 @@ p {
   }
 }
 
+/* An odd last card spans the row in the two-column layout */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .products-grid > .product:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 480px) {
   .product-body {
     padding: 24px;
